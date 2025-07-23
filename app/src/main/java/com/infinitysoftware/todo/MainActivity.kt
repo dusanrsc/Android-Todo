@@ -54,15 +54,11 @@ fun mainPage(defaultFontSize: TextUnit = 16.sp, maxCharLength: Int = 23, modifie
     val context = LocalContext.current
     val focusManager = LocalFocusManager.current
     val todoList = readData(context)
-
     val todo = remember { mutableStateOf("") }
-
     val deleteTodoStatus = remember { mutableStateOf(false) }
     val clickedItemIndex = remember { mutableStateOf(0) }
-
     val editTodoStatus = remember { mutableStateOf(false) }
     val clickedItem = remember { mutableStateOf("") }
-
     val textDialogStatus = remember { mutableStateOf(false) }
 
     Box(modifier = Modifier.fillMaxSize()) {
